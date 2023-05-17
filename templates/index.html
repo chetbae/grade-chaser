@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Grade Converter</title>
+    <script type="text/javascript" src="{{ url_for('static', filename = 'script.js') }}"></script>
+</head>
+<body>
+    <h1>Grade Converter</h1>
+    <form id="gradeForm" onsubmit="event.preventDefault(); convertGrade();">
+        <label for="grade">Grade:</label>
+        <input type="text" id="grade" name="grade">
+
+        <label for="system">System:</label>
+        <select id="system" name="system">
+            <option value="yosemite">Yosemite</option>
+            <option value="font">Font</option>
+        </select>
+
+        <button type="submit">Convert</button>
+    </form>
+
+    <div id="convertedGrade"></div>
+</body>
+</html>
